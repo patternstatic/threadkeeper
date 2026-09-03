@@ -32,7 +32,7 @@ body {
 button, input, textarea { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 a { color: inherit; text-decoration: none; }
-#top, #studio, #privacy, #buy { scroll-margin-top: 88px; }
+#top, #inside, #privacy, #buy { scroll-margin-top: 88px; }
 .wrap { width: min(100% - 48px, 1440px); margin-inline: auto; }
 .wordmark { font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; letter-spacing: -.03em; }
 .wordmark span { color: var(--gold); }
@@ -110,6 +110,13 @@ textarea { min-height: 82px; padding: 13px 14px; resize: vertical; line-height: 
 input::placeholder, textarea::placeholder { color: #656057; }
 input:focus, textarea:focus { border-color: var(--gold-light); box-shadow: 0 0 0 3px rgba(212,194,169,.08); }
 .builder-actions { display: flex; gap: 12px; flex-wrap: wrap; padding-top: 22px; border-top: 1px solid var(--border); }
+.product-card { align-self: stretch; }
+.feature-list { margin: 0; padding: 0; list-style: none; }
+.feature-list li { display: grid; grid-template-columns: 38px 1fr; gap: 14px; padding: 22px 0; border-top: 1px solid var(--border); }
+.feature-list li > span { color: var(--gold); font: .7rem/1 Georgia, "Times New Roman", serif; }
+.feature-list strong { display: block; color: var(--bone); font-size: .95rem; }
+.feature-list p { margin: 8px 0 0; color: var(--muted); font-size: .79rem; line-height: 1.65; }
+.full-button { width: 100%; margin-top: 24px; }
 
 .preview-column { position: sticky; top: 96px; }
 .passport { min-height: 610px; padding: clamp(28px, 4vw, 52px); border-radius: 28px; background: var(--paper); color: var(--ink); box-shadow: 0 35px 90px rgba(0,0,0,.34); transform: rotate(.65deg); }
@@ -131,6 +138,8 @@ input:focus, textarea:focus { border-color: var(--gold-light); box-shadow: 0 0 0
 .export-bar button:hover { color: var(--bone); border-color: var(--gold); }
 .export-bar > span { color: var(--quiet); font-size: .7rem; }
 .revision-panel { margin-top: 18px; padding: 24px; border: 1px solid var(--border); border-radius: 24px; background: rgba(17,17,15,.78); }
+.sample-passport { min-height: 0; }
+.preview-note { margin: 20px 0 0; color: var(--quiet); font-size: .7rem; line-height: 1.6; text-align: center; }
 .revision-heading h3 { margin: 9px 0 0; font-size: 1.15rem; }
 .revision-heading > span { color: var(--quiet); font-size: .68rem; }
 .revision-label { margin-top: 20px; }
