@@ -2,12 +2,13 @@
 
 **Take the thread with you.**
 
-This repository hosts the public product page for Threadkeeper, a local-first continuity passport studio for AI companions and agents. The complete studio is delivered as a ZIP after purchase.
+This repository hosts the public product page for Threadkeeper, a local-first Continuity Kit for AI companions and agents. The complete studio is delivered as a ZIP after purchase.
 
 ## Product page
 
 - Responsive static landing page.
 - Payhip checkout at `https://payhip.com/b/MtKLY`.
+- Product copy covers the readiness check, fictional sample, immutable revisions, and three portable exports.
 - No external fonts, analytics, or runtime dependencies.
 
 Threadkeeper organizes user-authored context. It does not claim to recover hidden model state or guarantee identity continuity.
