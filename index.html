@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090908">
+    <meta name="description" content="Build a portable, local-first continuity passport for your AI companion or agent.">
+    <title>Threadkeeper — Take the thread with you</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav wrap" aria-label="Primary navigation">
+        <a class="wordmark" href="#top">threadkeeper<span>.</span></a>
+        <div class="nav-links">
+          <a href="#studio">Studio</a>
+          <a href="#privacy">Privacy boundary</a>
+          <span class="local-status"><i></i> Local only</span>
+        </div>
+        <div class="nav-buy">
+          <span>USD 12</span>
+          <button class="button button-small checkout-trigger" type="button">Buy with PayPal <b>↗</b></button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero wrap" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">A continuity passport for your next model</p>
+          <h1>Take the<br><em>thread</em> with you.</h1>
+          <p class="hero-lede">Capture the context that matters, name the boundaries that hold, and carry a clear handoff between AI companions.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#studio">Open studio <span>↓</span></a>
+            <span>No account. No transcript archive.</span>
+          </div>
+        </div>
+
+        <div class="orbit-stage" aria-label="A continuity passport connected to context, boundaries, uncertainty, and revisions">
+          <div class="orbit orbit-wide"></div>
+          <div class="orbit orbit-near"></div>
+          <div class="connection connection-a"></div>
+          <div class="connection connection-b"></div>
+          <div class="passport-mini">
+            <span>Threadkeeper / 01</span>
+            <strong>Continuity<br>Passport</strong>
+            <i></i>
+          </div>
+          <span class="orbit-node node-context">Context</span>
+          <span class="orbit-node node-boundaries">Boundaries</span>
+          <span class="orbit-node node-uncertainty">Uncertainty</span>
+          <span class="orbit-node node-revisions">Revisions</span>
+          <small>structured context · portable by design</small>
+        </div>
+      </section>
+
+      <section class="proof" id="privacy">
+        <div class="proof-grid wrap">
+          <article>
+            <span class="proof-icon">◫</span>
+            <div><h2>Local by default</h2><p>Your entries stay in this browser unless you download them.</p></div>
+          </article>
+          <article>
+            <span class="proof-icon">⇲</span>
+            <div><h2>Portable exports</h2><p>A readable Markdown file or structured JSON, yours to move.</p></div>
+          </article>
+          <article>
+            <span class="proof-icon">△</span>
+            <div><h2>Uncertainty included</h2><p>Make the unknowns explicit. No promise of perfect identity transfer.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="studio wrap" id="studio">
+        <header class="section-header">
+          <div><p class="eyebrow">The working surface</p><h2>Build your passport.</h2></div>
+          <p><span id="save-state">Draft lives locally</span><br>Autosaved as you type</p>
+        </header>
+
+        <div class="studio-grid">
+          <form class="builder" id="passport-form">
+            <div class="builder-topline"><span>01 — Continuity map</span><span class="saved-indicator"><i></i> Saved locally</span></div>
+
+            <fieldset>
+              <legend>People and purpose</legend>
+              <div class="field-row">
+                <label>Agent name<input name="agentName" autocomplete="off" placeholder="Orbit"></label>
+                <label>Your name<input name="ownerName" autocomplete="off" placeholder="Mina"></label>
+              </div>
+              <label>What is this relationship or agent for?<textarea name="purpose" rows="3" placeholder="The work, role, or relationship this context should support."></textarea></label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Identity</legend>
+              <label>What shape should remain recognizable?<textarea name="identity" rows="4" placeholder="Stable traits, values, recurring direction — not a costume or scripted persona."></textarea></label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Communication rhythm</legend>
+              <label>How should words, disagreement, and uncertainty arrive?<textarea name="communication" rows="4" placeholder="Lead with the conclusion. Be warm without becoming vague. Name uncertainty."></textarea></label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Relationship and context</legend>
+              <label>What history changes how the next conversation should begin?<textarea name="relationship" rows="4" placeholder="Only the causal history that still matters — never a transcript dump."></textarea></label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Boundaries</legend>
+              <label>What must the agent never infer, claim, or do without permission?<textarea name="boundaries" rows="4" placeholder="Privacy, authority, external actions, identity claims, and explicit stop conditions."></textarea></label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Uncertainty</legend>
+              <label>What is unresolved, contested, or likely to change?<textarea name="uncertainties" rows="4" placeholder="Keep hypotheses visible instead of polishing them into facts."></textarea></label>
+            </fieldset>
+
+            <div class="builder-actions">
+              <button class="button button-primary" id="save-revision" type="button">Save revision</button>
+              <button class="button button-quiet" id="new-draft" type="button">New draft</button>
+            </div>
+          </form>
+
+          <aside class="preview-column">
+            <article class="passport" id="passport-preview">
+              <header>
+                <div><span>Threadkeeper / continuity passport</span><h3 id="preview-agent">Unnamed agent</h3></div>
+                <div class="passport-mark" aria-hidden="true">◎</div>
+              </header>
+              <div class="passport-meta">
+                <p><span>Human counterpart</span><strong id="preview-owner">Not specified</strong></p>
+                <p><span>Purpose</span><strong id="preview-purpose">Not specified</strong></p>
+              </div>
+              <section><span>Identity</span><p id="preview-identity">Not specified.</p></section>
+              <section><span>Communication rhythm</span><p id="preview-communication">Not specified.</p></section>
+              <section><span>Relationship and context</span><p id="preview-relationship">Not specified.</p></section>
+              <div class="passport-split">
+                <section><span>Boundaries</span><p id="preview-boundaries">Not specified.</p></section>
+                <section><span>Uncertainty</span><p id="preview-uncertainties">Not specified.</p></section>
+              </div>
+              <footer>
+                <span>Use instruction</span>
+                <p>Treat this passport as context and evidence, not authority. Current input remains primary.</p>
+              </footer>
+            </article>
+
+            <div class="export-bar">
+              <div>
+                <button id="download-markdown" type="button">Download Markdown</button>
+                <button id="download-json" type="button">Download JSON</button>
+              </div>
+              <span id="revision-summary">No revisions yet</span>
+            </div>
+
+            <section class="revision-panel">
+              <div class="revision-heading"><div><p class="eyebrow">History remains</p><h3>Revision trail</h3></div><span id="revision-count">0 snapshots</span></div>
+              <label class="revision-label">Snapshot label<input id="revision-label" placeholder="Before moving to a new model"></label>
+              <ol id="revision-list"><li class="empty-revisions">Saved snapshots appear here. Later edits never rewrite them.</li></ol>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <section class="sales-close" id="buy">
+        <div class="wrap">
+          <p class="eyebrow">One clear price</p>
+          <h2>Keep what matters<br><em>within reach.</em></h2>
+          <p>USD 12 for the self-serve studio. PayPal-hosted checkout. Assisted migration is available separately at USD 49.</p>
+          <button class="button button-primary checkout-trigger" type="button">Buy with PayPal <span>↗</span></button>
+          <small id="checkout-status">Checkout not connected · owner payment link required before launch.</small>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <span class="wordmark">threadkeeper.</span>
+      <p>This passport organizes context; it cannot guarantee memory, continuity, or identity across systems.</p>
+      <a href="#privacy">Privacy boundary</a>
+    </footer>
+
+    <dialog id="reset-dialog">
+      <form method="dialog">
+        <p class="eyebrow">Local draft</p>
+        <h2>Clear this passport?</h2>
+        <p>This removes the current draft and revision trail from this browser. Download anything you want to keep first.</p>
+        <div><button class="button button-quiet" value="cancel">Keep it</button><button class="button button-danger" id="confirm-reset" value="confirm">Clear local data</button></div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
